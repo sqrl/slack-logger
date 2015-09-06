@@ -2,7 +2,7 @@
 Slack logger is a simple webserver that listens for messages from an outgoing Slack webhook and logs them. This can be useful for saving chat history
 from a free slack instance.
 
-The log format is one json object per line, each containing a string `user_name`, a float `timestamp` and a string `message.` Example:
+The log format is one json object per line, each containing a string `user_name`, a float `timestamp` and a string `message`. Example:
  
     {"user_name":"blackpatch","timestamp":"1441578779.017708","text":"How To Dismantle An Atomic Bomb, like in that U2 album, Achtung Baby"}
 
