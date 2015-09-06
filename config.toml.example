@@ -1,0 +1,7 @@
+# A sample config file for the slack logger.
+# This should be copied to config.toml before running.
+
+[slack-logger]
+secret_token = "..."  # Replace with the token from Slack's outgoing webhook.
+log_directory = "/path/to/log/directory"  # Replace with the location where you want the logs to be stored.
+port = 8080  # The port you want slack-logger to listen on.
