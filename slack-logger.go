@@ -63,5 +63,9 @@ func main() {
 
     // Begin listening.
     http.HandleFunc("/", handler)
-    http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
+    err = http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
+    if err != nil {
+        fmt.Fprintln(os.Stderr, "Error starting server: ", err)
+        os.Exit(1)
+    }
 }
