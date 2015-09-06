@@ -9,9 +9,14 @@ The log format is one json object per line, each containing a string `user_name`
 The logs are rotated every 100 MB using `lumberjack` (https://github.com/natefinch/lumberjack).
 
 ## Installation
+These instructions assume you have a working golang environment and have cloned slack-logger.
+
  * Crreate an outgoing webhook integration in slack and note the secret token.
  * Copy `config.toml.example` to `config.toml`.
  * Fill in the fields of `config.toml` with your secret token, the location where you want to save your logs, and the port you want slack-logger to listen on.
+ * Install dependencies:
+   * `go get github.com/pelletier/go-toml`
+   * `go get gopkg.in/natefinch/lumberjack.v2`
  * `go run slack-logger.go`
  * In the outgoing webhook integration, fill in the url for the machine for your slack-logger. Remember to include the port.
 
