@@ -41,7 +41,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    log.Println(bytes)
+    log.Println(string(bytes))
 }
 
 
